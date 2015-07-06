@@ -1,0 +1,51 @@
+jqueryui.com
+
+Changelog: 1.10.0 typo fixes
+
+behaviour  => behavior (American spelling per the Style Guide)
+
+
+
+/page/changelog/1.10.0.md
+    accessibilty => accessibility
+    dissapears => disappears
+    behaviour  => behavior
+
+/page/changelog/1.10.4.md
+    Spport => Support
+
+/page/changelog/1.5.2.md
+    swedish => Swedish
+
+/page/changelog/1.7.md
+    recurson => recursion
+    failes => fails
+    sellect => select
+    whos => whose
+    recognised => recognized
+    initialise => initialize
+    otion => option
+    missbehaves => misbehaves
+    carefuly => carefully
+    shoud => should
+
+
+
+
+———
+jqueryui.com/page/changelog/1.6.md
+    whendragging => when dragging
+    passin => pass in
+    a object => an object
+    bolean => boolean
+    thecallbacks => the callbacks
+    aclass => a class
+    alsoresizable => also resizable
+    dueto => due to
+    asdescribed => as described
+    simplier => simpler
+    betterworking => better working
+    statusdisplay => status display
+    notitle => no title
+    dialgos => dialogues
+    notstored => not stored
