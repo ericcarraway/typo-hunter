@@ -1,31 +1,30 @@
 
-CD into the directory of your repo
-make a temporary directory to store all markdown files
+CD into the directory of your repo and make a temporary directory to store all markdown files.
 ```
 mkdir _md
 ```
 
-copy all markdown files (including those in subdirectories) to the temporary folder you just created
+Copy all markdown files (including those in subdirectories) to the temporary folder you just created.
 ```
 find . -name \*.md -exec cp {} _md \;
 ```
 
-navigate to the folder
+Navigate to the new folder.
 ```
 cd _md
 ```
 
-concatenate all of the markdown files into one file
+Concatenate all of the markdown files into one file.
 ```
 cat *.md >> _all.md
 ```
 
-to be continued
+--
 
 
 
 --
-the same proccess for HTML files:
+Here's the same proccess for HTML files:
 ```
 mkdir _html
 find . -name \*.html -exec cp {} _html \;
