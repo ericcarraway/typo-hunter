@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tools</title>
+
+    <link href="css/bootstrap_darkly.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="scripts/lib/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="scripts/lib/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row clearfix">
+        </div>
+        <div class="row clearfix">
+            <div id="left-column" class="col-md-3 column">
+                <h1>Tools</h1>
+                <hr>
+                <div id="stats">
+                    <h3>Length:</h3>
+                    <p><span id="characters-report">_</span> Characters</p>
+                    <p><span id="lines-report">_</span> Lines</p>
+                </div>
+                <button class="btn btn-primary btn-xs" type="button" id="update-length">update</button>
+                <button class="btn btn-primary btn-xs" type="button" id="clear">clear</button>
+                <hr>
+                <button class="btn btn-primary btn-xs" type="button" id="lowercase">
+                    lowercase
+                </button>
+                <button class="btn btn-primary btn-xs" type="button" id="uppercase">
+                    uppercase
+                </button>
+                <button class="btn btn-primary btn-xs" type="button" id="reverse">
+                    reverse
+                </button>
+
+                <hr>
+
+                <h3>HTML Strip</h3>
+                <button class="btn btn-primary btn-xs" type="button" id="strip-html-comments">
+                    strip html comments
+                </button>
+                <button class="btn btn-primary btn-xs" type="button" id="strip-html-tags">
+                    strip html tags
+                </button>
+                <button class="btn btn-primary btn-xs" type="button" id="strip-nbsp">
+                    strip &amp;nbsp;
+                </button>
+
+                <hr>
+
+                <h3>Trim</h3>
+                <button class="btn btn-primary btn-xs" type="button" id="trim-one-right">
+                    trim one right
+                </button>
+                <button class="btn btn-primary btn-xs" type="button" id="trim-one-left">
+                    trim one left
+                </button>
+                <button class="btn btn-primary btn-xs" type="button" id="trim-lines-left">
+                    trim lines left
+                </button>
+                <button class="btn btn-primary btn-xs" type="button" id="trim-lines-right">
+                    trim lines right
+                </button>
+
+                <hr>
+
+                <h3>Blank Space Strip</h3>
+                <button class="btn btn-primary btn-xs" type="button" id="strip-double-spaces">
+                    strip double spaces
+                </button>
+                <button class="btn btn-primary btn-xs" type="button" id="strip-empty-lines">
+                    strip empty lines
+                </button>
+                <button class="btn btn-primary btn-xs" type="button" id="strip-line-breaks">
+                    strip line breaks
+                </button>
+
+                <hr>
+
+                <button class="btn btn-primary btn-xs" type="button" id="list-unique-words">
+                    list unique words
+                </button>                
+            </div>
+            <div class="col-md-9 column">
+                <textarea name="textarea" rows="60" cols="100"></textarea>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <script type="text/javascript" src="scripts/stringFunctions.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            'use strict';
+            var getTextBox = function () {
+                return $('textarea').val();
+            };
+            var setTextBox = function (str) {
+                $('textarea').val(str);
+            };
+            $('#update-length').click(function () {
+                var content = getTextBox();
+                var numberOfCharacters = content.length;
+                var arrayOfLines = content.match(/[^\r\n]+/g) || [];
+                var numberOfLines = arrayOfLines.length;
+                $('#characters-report').html(numberOfCharacters);
+                $('#lines-report').html(numberOfLines);
+            });
+            $('#clear').click(function () {
+                setTextBox('');
+            });            
+            $('#lowercase').click(function () {
+                setTextBox(getTextBox().toLowerCase());
+            });
+            $('#uppercase').click(function () {
+                setTextBox(getTextBox().toUpperCase());
+            });
+            $('#reverse').click(function () {
+                setTextBox(getTextBox().split('').reverse().join(''));
+            });
+            $('#strip-html-comments').click(function () {
+                setTextBox(stripHtmlComments(getTextBox()));
+            });
+            $('#strip-html-tags').click(function () {
+                setTextBox(stripHtmlTags(getTextBox()));
+            });
+            $('#strip-nbsp').click(function () {
+                alert('sdf');
+                setTextBox(getTextBox().replace(/&nbsp;/gi, ' '));
+            });
+            $('#strip-line-breaks').click(function () {
+                setTextBox(stripLineBreaks(getTextBox()));
+            });
+            $('#strip-empty-lines').click(function () {
+                setTextBox(stripEmptyLines(getTextBox()));
+            });
+            $('#strip-double-spaces').click(function () {
+                setTextBox(stripDoubleSpaces(getTextBox()));
+            });           
+            $('#trim-one-right').click(function () {
+                setTextBox(getTextBox().trimRight());
+            });
+            $('#trim-one-left').click(function () {
+                setTextBox(getTextBox().trimLeft());
+            });
+            $('#trim-lines-left').click(function () {
+                setTextBox(trimLinesLeft(getTextBox()));
+            });
+            $('#trim-lines-right').click(function () {
+                setTextBox(trimLinesRight(getTextBox()));
+            });
+            $('#list-unique-words').click(function () {
+                setTextBox(uniqueWords(getTextBox()));
+            });
+
+
+// hex colors used
+// rgb colors used
+
+
+
+
+        });
+    </script>
+</body>
+</html>

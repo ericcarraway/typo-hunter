@@ -1,0 +1,26 @@
+h1 {
+	font-size: 1.75em;
+}
+h3 {
+	font-size: 1.25em;
+}
+.container {
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+#left-column {
+	text-align: left;
+}
+
+#stats {
+	text-align: left;
+}
+
+.btn-xs {
+	margin: 3px;
+}
+
+textarea {
+	font-family: monospace;
+}
