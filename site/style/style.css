@@ -1,0 +1,28 @@
+div.container {
+    width: 100%;
+    text-align: center;
+}
+button {
+    font-family: monospace;
+    font-size: 14px;
+    color: #464545;
+    padding: 8px;
+    margin: 8px;
+}
+textarea {
+    font-family: monospace;
+    font-size: 14px;
+    color: #464545;
+    padding: 8px;
+    margin: 8px;
+}
+a {
+    font-family: monospace;
+    font-size: 14px;
+    color: #464545;
+    padding: 8px;
+    margin: 8px;
+}
+div.bottom-buttons {
+    text-align: left;
+}
