@@ -4,3 +4,9 @@ node_modules
 .sass-cache
 *.sublime-*
 .jekyll-metadata
+
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components
