@@ -1,48 +1,64 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>typo-hunter</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
 
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-    body {
-        background-color: #f0f0f2;
-        margin: 0;
-        padding: 0;
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    <meta name="description"
+          content="utilities for manipulating text">
+    <meta name="author" content="Eric Carraway">
+    <link rel="icon" href="../assets/img/favicon.ico">
 
-    }
-    div {
-        width: 600px;
-        margin: 5em auto;
-        padding: 50px;
-        background-color: #fff;
-        border-radius: 1em;
-    }
-    a:link, a:visited {
-        color: #38488f;
-        text-decoration: none;
-    }
-    @media (max-width: 700px) {
-        body {
-            background-color: #fff;
-        }
-        div {
-            width: auto;
-            margin: 0 auto;
-            border-radius: 0;
-            padding: 1em;
-        }
-    }
-    </style>
+    <title>Text Utilities</title>
 </head>
-
 <body>
-<div>
-    <h1>Typo Hunter</h1>
-    <p>"Hello, World!"</p>
+<link rel="stylesheet" href="./site/style/style.css" />
+
+<div class="container">
+
+    <button type="button" onclick="app.uniqueWords()">
+        list unique words
+    </button>
+
+    <!-- deekayen, splasho, aspell -->
+    <button type="button" onclick="app.filterCommonProse()">
+        filter common prose
+    </button>
+
+    <br />
+
+    <!-- keep no space between opening and closing textarea tags -->
+    <textarea name="textarea" rows="40" cols="80"></textarea>
+
+    <br />
+
+    <div class="bottom-buttons">
+        <button type="button" onclick="app.filterTmProse()">
+            TM
+        </button>
+
+        <button type="button" onclick="app.filterAlice()">
+            Alice
+        </button>
+    </div>
+
+    <a href="../">ericcarraway.com</a>
+    |
+    <a href="https://github.com/ericcarraway/ericcarraway.github.io">view on GitHub</a>
 </div>
+<p><!-- /.container --></p>
+
+<script src="./wordlists/js/deekayen.js"></script>
+<script src="./wordlists/js/splasho.js"></script>
+<script src="./wordlists/js/aspell.js"></script>
+<script src="./wordlists/js/motto.js"></script>
+<script src="./wordlists/js/alice.js"></script>
+
+<script src="./site/js/textUtil.js"></script>
+<script src="./site/js/domManip.js"></script>
+<script src="./site/js/app.js"></script>
+
 </body>
 </html>
