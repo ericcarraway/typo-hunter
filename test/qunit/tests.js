@@ -3,3 +3,4 @@ QUnit.test('it should load QUnit', function (assert) {
 });
 
 tests.filterByArr();
+tests.removeDuplicates();
