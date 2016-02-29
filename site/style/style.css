@@ -1,28 +1,68 @@
+/**
+ * position, display
+ * box model: margin (outer), padding (inner)
+ * font, color, text
+ * background, border
+ * CSS3 properties (border-radius, box-shadow)
+ */
+
+body {
+   font-family: 'Montserrat Light', sans-serif;
+   color: #555
+}
+
 div.container {
     width: 100%;
     text-align: center;
 }
-button {
-    font-family: monospace;
-    font-size: 14px;
-    color: #464545;
-    padding: 8px;
-    margin: 8px;
+
+/* -------- START: GHOST BUTTON -------- */
+button.btn-ghost {
+    transition: background-color 0.4s ease,
+                color 0.4s ease;
+
+    display: inline-block;
+    margin: 4px 4px;
+    padding: 8px 12px;
+    font-family: 'Montserrat Light', sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    color: #555;
+    background-color: #fff;
+
+    border: 1px solid #555;
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 }
+
+button.btn-ghost:hover,
+button.btn-ghost:active {
+    color: #fff;
+    background-color: #555;
+}
+
+button.btn-ghost:focus {
+    outline: none;
+}
+/* -------- END: GHOST BUTTON -------- */
+
 textarea {
     font-family: monospace;
     font-size: 14px;
-    color: #464545;
+    color: #555;
     padding: 8px;
     margin: 8px;
 }
+
 a {
-    font-family: monospace;
     font-size: 14px;
-    color: #464545;
+    color: #555;
     padding: 8px;
     margin: 8px;
 }
+
 div.bottom-buttons {
     text-align: left;
 }
