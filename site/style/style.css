@@ -11,12 +11,22 @@ body {
    color: #555
 }
 
+/* -------- START: GitHub Fork Ribbon -------- */
+a.github-fork-ribbon.right-top {
+    margin: 0;
+}
+
+a.github-fork-ribbon.right-top:before {
+    background-color: #555;
+}
+/* -------- END: GitHub Fork Ribbon  -------- */
+
 div.container {
     width: 100%;
     text-align: center;
 }
 
-/* -------- START: GHOST BUTTON -------- */
+/* -------- START: Ghost Buttons -------- */
 button.btn-ghost {
     transition: background-color 0.4s ease,
                 color 0.4s ease;
@@ -46,7 +56,7 @@ button.btn-ghost:active {
 button.btn-ghost:focus {
     outline: none;
 }
-/* -------- END: GHOST BUTTON -------- */
+/* -------- END: Ghost Buttons -------- */
 
 textarea {
     font-family: monospace;
