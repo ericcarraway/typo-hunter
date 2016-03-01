@@ -107,3 +107,46 @@ textUtil.filterAlice = function (str) {
 
     return returnArr.sort().join('\n');
 };
+
+
+// 2016-02-29
+// experimenting with punctuation removal via regex
+textUtil.removePunctuation = function (str) {
+    var regexes = [
+        '!', // exclamationPoint
+        '"', // doubleQuote
+        '#', // numberSign
+        '\\$', // dollarSign
+        '%', // percentSign
+        '&', // ampersand
+        '\'', // singleQuote
+        '\\(', // openParentheses
+        '\\)', // closeParentheses
+        '\\*', // asterisk
+        '\\+', // plusSign
+        ',', // comma
+        '-', // hyphen
+        '\\.', // period
+        '/', // forwardSlash
+        ':', // colon
+        ';', // semicolon
+        '<', // lessThan
+        '=', // equalsSign
+        '>', // greaterThan
+        '\\?', // questionMark
+        '@', // atSign
+        '\\[', // openSquareBracket
+        '\\\\', // backslash
+        ']', // closeSquareBracket
+        '\\^', // caret
+        '_', // underscore
+        '`', // backtick
+        '{', // openCurlyBrace
+        '\\|', // pipe
+        '}', // closeCurlyBrace
+        '~', // tilde
+    ];
+    regexes = regexes.join('|');
+    var regExp = new RegExp(regexes, 'g');
+    return str.replace(regExp, ' ');
+};

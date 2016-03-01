@@ -23,3 +23,9 @@ app.filterAlice = function () {
     words = textUtil.filterAlice(words);
     domManip.setTextarea(words);
 };
+
+app.removeAllPunctuation = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.removePunctuation(words);
+    domManip.setTextarea(words);
+};
