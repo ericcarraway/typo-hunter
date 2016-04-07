@@ -24,6 +24,12 @@ app.filterAlice = function () {
     domManip.setTextarea(words);
 };
 
+app.filter_2016_04_07 = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.filter_2016_04_07(words);
+    domManip.setTextarea(words);
+};
+
 app.removeAllPunctuation = function () {
     var words = domManip.getTextarea();
     words = textUtil.removePunctuation(words);

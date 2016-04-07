@@ -6,3 +6,6 @@
 2016-02-27
 * `motto.js` - 1,792 additional words characteristic of a dev blog
 * `alice.js` - 951 more words from the Utah teapot of computational linguistics
+
+2016-04-07
+* `_2016_04_07.js` - 64 words - relevant to a current project

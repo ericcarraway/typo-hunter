@@ -108,6 +108,30 @@ textUtil.filterAlice = function (str) {
     return returnArr.sort().join('\n');
 };
 
+textUtil.filter_2016_04_07 = function (str) {
+    // remove line breaks
+    str = str.replace(/(\r\n|\n|\r)/gm, ' ');
+
+    // split words
+    var arr = str.split(' ');
+
+    // trim words
+    for (var word = 0; word < arr.length; word++) {
+        arr[word] = arr[word].trim();
+    }
+
+    var returnArr = [];
+
+    for (var i = 0; i < arr.length; i++) {
+        // if the word in question does not exist in the array,
+        // add it to the array
+        if (wordlists._2016_04_07.indexOf(arr[i]) === -1) {
+            returnArr.push(arr[i]);
+        }
+    }
+
+    return returnArr.sort().join('\n');
+};
 
 // 2016-02-29
 // experimenting with punctuation removal via regex
