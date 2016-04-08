@@ -35,3 +35,9 @@ app.removeAllPunctuation = function () {
     words = textUtil.removePunctuation(words);
     domManip.setTextarea(words);
 };
+
+app.newlineToSpace = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.newlineToSpace(words);
+    domManip.setTextarea(words);
+};

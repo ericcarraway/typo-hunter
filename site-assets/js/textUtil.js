@@ -174,3 +174,7 @@ textUtil.removePunctuation = function (str) {
     var regExp = new RegExp(regexes, 'g');
     return str.replace(regExp, ' ');
 };
+
+textUtil.newlineToSpace = function (str) {
+    return str.replace(/\n/g, " ");
+};
