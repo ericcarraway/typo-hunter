@@ -8,4 +8,7 @@
 * `alice.js` - 951 more words from the Utah teapot of computational linguistics
 
 2016-04-07
-* `_2016_04_07.js` - 64 words - relevant to a current project
+* `2016_04_07.js` - 64 words - relevant to a current project
+
+2016-04-25
+* `2016_04_25.js` - 205 words
