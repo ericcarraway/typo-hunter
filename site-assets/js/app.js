@@ -36,6 +36,12 @@ app.filter_2016_04_25 = function () {
     domManip.setTextarea(words);
 };
 
+app.filterPapa = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.filterPapa(words);
+    domManip.setTextarea(words);
+};
+
 app.removeAllPunctuation = function () {
     var words = domManip.getTextarea();
     words = textUtil.removePunctuation(words);

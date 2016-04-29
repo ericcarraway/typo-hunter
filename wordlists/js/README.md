@@ -12,3 +12,6 @@
 
 2016-04-25
 * `2016_04_25.js` - 205 words
+
+2016-04-28
+* `papa.js` - 127 words (a partial prose whitelist from John Papa's Angular Style Guide)
