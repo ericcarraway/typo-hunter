@@ -42,6 +42,12 @@ app.filterPapa = function () {
     domManip.setTextarea(words);
 };
 
+app.filterAirbnb = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.filterAirbnb(words);
+    domManip.setTextarea(words);
+};
+
 app.removeAllPunctuation = function () {
     var words = domManip.getTextarea();
     words = textUtil.removePunctuation(words);
