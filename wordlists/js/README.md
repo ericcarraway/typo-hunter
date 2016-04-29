@@ -15,3 +15,6 @@
 
 2016-04-28
 * `papa.js` - 127 words (a partial prose whitelist from John Papa's Angular Style Guide)
+
+2016-04-29
+* `airbnb.js` - 48 prose words from the Airbnb JS style guide
