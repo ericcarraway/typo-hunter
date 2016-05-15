@@ -36,6 +36,12 @@ app.filter_2016_04_25 = function () {
     domManip.setTextarea(words);
 };
 
+app.filter_2016_05_14 = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.filter_2016_05_14(words);
+    domManip.setTextarea(words);
+};
+
 app.filterPapa = function () {
     var words = domManip.getTextarea();
     words = textUtil.filterPapa(words);
