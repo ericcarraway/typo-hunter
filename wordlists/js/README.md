@@ -21,3 +21,6 @@
 
 2016-05-14
 * `angular-1.js` - 225 words from the AngularJS documentation
+
+2016-05-14
+* `2016-05-14.js` - 94 words

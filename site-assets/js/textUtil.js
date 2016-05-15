@@ -158,6 +158,21 @@ textUtil.filter_2016_04_25 = function (str) {
     return returnArr.sort().join('\n');
 };
 
+textUtil.filter_2016_05_14 = function (str) {
+    str = str.replace(/(\r\n|\n|\r)/gm, ' ');
+    var arr = str.split(' ');
+    for (var word = 0; word < arr.length; word++) {
+        arr[word] = arr[word].trim();
+    }
+    var returnArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (wordlists._2016_05_14.indexOf(arr[i]) === -1) {
+            returnArr.push(arr[i]);
+        }
+    }
+    return returnArr.sort().join('\n');
+};
+
 textUtil.filterPapa = function (str) {
     // remove line breaks
     str = str.replace(/(\r\n|\n|\r)/gm, ' ');
