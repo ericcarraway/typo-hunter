@@ -198,6 +198,21 @@ textUtil.filterAirbnb = function (str) {
     return returnArr.sort().join('\n');
 };
 
+textUtil.filterAngular1 = function (str) {
+    str = str.replace(/(\r\n|\n|\r)/gm, ' ');
+    var arr = str.split(' ');
+    for (var word = 0; word < arr.length; word++) {
+        arr[word] = arr[word].trim();
+    }
+    var returnArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (wordlists.angular_1.indexOf(arr[i]) === -1) {
+            returnArr.push(arr[i]);
+        }
+    }
+    return returnArr.sort().join('\n');
+};
+
 // 2016-02-29
 // experimenting with punctuation removal via regex
 textUtil.removePunctuation = function (str) {

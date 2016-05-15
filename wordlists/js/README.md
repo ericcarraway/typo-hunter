@@ -18,3 +18,6 @@
 
 2016-04-29
 * `airbnb.js` - 48 prose words from the Airbnb JS style guide
+
+2016-05-14
+* `angular-1.js` - 225 words from the AngularJS documentation

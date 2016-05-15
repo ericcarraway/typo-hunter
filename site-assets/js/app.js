@@ -48,6 +48,12 @@ app.filterAirbnb = function () {
     domManip.setTextarea(words);
 };
 
+app.filterAngular1 = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.filterAngular1(words);
+    domManip.setTextarea(words);
+};
+
 app.removeAllPunctuation = function () {
     var words = domManip.getTextarea();
     words = textUtil.removePunctuation(words);
