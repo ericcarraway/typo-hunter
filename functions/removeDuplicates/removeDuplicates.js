@@ -1,10 +1,10 @@
-var removeDuplicates = function(arrOfStrings) {
+var removeDuplicates = function (arrOfStrings) {
     var seen = {};
-    return arrOfStrings.filter(function(word) {
+    return arrOfStrings.filter(function (word) {
         if (seen[word]) {
             return;
         }
         seen[word] = true;
-        return word;
+        return word; // ESLint Error: consistent-return
     });
 };

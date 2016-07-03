@@ -24,7 +24,7 @@ cat *.md >> _all.md
 
 
 --
-Here's the same proccess for HTML files:
+Here's the same process for HTML files:
 ```
 mkdir _html
 find . -name \*.html -exec cp {} _html \;

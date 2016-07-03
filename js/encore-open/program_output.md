@@ -1,6 +1,6 @@
 ## program_output.md
- 
- ```
+
+```
 accross => across
 adjascent => adjacent
 coloured => colored
