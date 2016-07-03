@@ -5,7 +5,10 @@ var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
 
 gulp.task('build-js', function () {
-    return gulp.src('source/javascript/**/*.js')
+    return gulp.src([
+        'wordlists/js/*.js',
+        'source/javascript/**/*.js'
+        ])
         .pipe(sourcemaps.init())
         .pipe(concat('scripts.js'))
 
