@@ -5,8 +5,14 @@ var gutil = require('gulp-util');
 gulp.task('watch', function () {
     var message = '\'watch\' started from gulp/tasks/watch.js';
 
+    // scripts
     gulp.watch('source/javascript/**/*.js', ['jshint', 'build-js']);
-    gulp.watch('source/scss/**/*.scss', ['build-css']);
+
+    // styles
+    gulp.watch([
+        'source/scss/**/*.scss',
+        'source/scss/**/*.css'
+        ], ['build-css']);
 
     return gutil.log(message);
 });

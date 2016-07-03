@@ -5,7 +5,10 @@ var sass = require('gulp-sass');
 
 // compile *.scss files
 gulp.task('build-css', function () {
-    return gulp.src('source/scss/**/*.scss')
+    return gulp.src([
+        'source/scss/**/*.scss',
+        'source/scss/**/*.css'
+        ])
         .pipe(sourcemaps.init())  // process the original sources
         .pipe(concat('styles.css'))
         .pipe(sass())
