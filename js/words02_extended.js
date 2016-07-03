@@ -1665,7 +1665,7 @@ var words02_extended = [
   'general',
   'generally',
   'generate',
-  'generation'
+  'generation',
   'generation',
   'generous',
   'genetic',

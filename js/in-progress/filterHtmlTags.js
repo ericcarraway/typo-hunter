@@ -3,17 +3,16 @@ var filterHtmlTags = function (str) {
   var filterIsOn = false;
   var returnVal = [
   ];
-  for (var i = 0; i < arr.length; i++) {
+  var i;
+  for (i = 0; i < arr.length; i++) {
     if (arr[i] === '<') {
       filterIsOn = true;
       continue;
-    } 
-    else if (arr[i] === '>') {
+    } else if (arr[i] === '>') {
       returnVal.push(' ');
       filterIsOn = false;
       continue;
-    } 
-    else if (filterIsOn === false) {
+    } else if (filterIsOn === false) {
       returnVal.push(arr[i]);
     }
   }
@@ -33,4 +32,3 @@ var filterComments = function (str) {
 
 
 };*/
-

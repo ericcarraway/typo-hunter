@@ -7,10 +7,14 @@ var uniqueWords = function (text) {
 };
 
 var config = require('./config.js');
+
+var webdriver;
+var browser;
+
 console.log('config:', config);
 
-var webdriver = require('selenium-webdriver');
-var browser = new webdriver.Builder().
+webdriver = require('selenium-webdriver');
+browser = new webdriver.Builder().
    withCapabilities(webdriver.Capabilities.chrome()).
    build();
 

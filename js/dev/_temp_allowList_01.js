@@ -19,17 +19,17 @@ var allowList_01 = [
   'Gulp',
   'HTML',
   'Invalid',
-  'Item'
+  'Item',
   'Kendo',
   'LocalStorageModule',
   'MainCtrl',
   'Make',
   'Node.js',
-  'OSX'
+  'OSX',
   'PHP',
   'Python',
   'Ruby',
-  'So'
+  'So',
   'String',
   'Stripe',
   'Templating',
@@ -39,7 +39,7 @@ var allowList_01 = [
   'Yeoman',
   'Your',
   'about',
-  'abstract'
+  'abstract',
   'angular-resource',
   'app',
   'bar',

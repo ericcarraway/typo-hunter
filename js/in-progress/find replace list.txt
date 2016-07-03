@@ -56,9 +56,6 @@
 <tr class="odd">
 <ul>
 
-
-
-
 anything between...
 
 <script type="text/javascript">
@@ -67,6 +64,5 @@ anything between...
 anything between...
 <style type="text/css">
 </style>
-
 
 <%= %>

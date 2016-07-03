@@ -13,14 +13,15 @@ var config = {
     url: 'http://example.com/'
 };
 
+var browser;
+
 console.log('config:', config);
 
-var browser = new webdriver.Builder().
+browser = new webdriver.Builder().
    withCapabilities(webdriver.Capabilities.chrome()).
    build();
 
 browser.get(config.url);
-
 
 browser.findElements(webdriver.By.css('body'))
     .then(function (elements) {
@@ -35,7 +36,7 @@ browser.findElements(webdriver.By.css('body'))
                         var words;
                         // console.log(text);
                         console.log('');
-                        console.log('unique words on this page:')
+                        console.log('unique words on this page:');
                         words = _.words(text);
                         words = _.uniq(words);
                         words = words.sort();
@@ -43,7 +44,6 @@ browser.findElements(webdriver.By.css('body'))
                         });
                 });
         });
-
 
 browser.quit();
 

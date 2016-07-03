@@ -4,7 +4,9 @@ var str = 'The rabbit-hole went straight on like a tunnel for some way, and then
 var wordCounts = {
 };
 var words = str.split(/\b/);
-for (var i = 0; i < words.length; i++) {
+var i;
+for (i = 0; i < words.length; i++) {
   wordCounts['_' + words[i]] = (wordCounts['_' + words[i]] || 0) + 1;
 }
+
 console.log(wordCounts);
