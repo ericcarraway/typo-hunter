@@ -1,7 +1,6 @@
 node_modules
 /node_modules
 
-
 .DS_Store
 .tmp
 
@@ -11,7 +10,6 @@ node_modules
 *.sublime-*
 .jekyll-metadata
 
-/node_modules
 /dist
 /.tmp
 

@@ -1,0 +1,4 @@
+// initialize the app
+var typoHunter = {};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0EiLCJmaWxlIjoiYnVuZGxlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gaW5pdGlhbGl6ZSB0aGUgYXBwXG52YXIgdHlwb0h1bnRlciA9IHt9O1xuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
