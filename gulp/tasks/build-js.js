@@ -13,5 +13,5 @@ gulp.task('build-js', function () {
         // $ gulp --type production
         .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('public/assets/javascript'));
+        .pipe(gulp.dest('dist'));
 });

@@ -8,5 +8,5 @@ gulp.task('build-css', function () {
         .pipe(sourcemaps.init())  // process the original sources
         .pipe(sass())
         .pipe(sourcemaps.write()) // add the map to modified source
-        .pipe(gulp.dest('public/assets/stylesheets'));
+        .pipe(gulp.dest('dist'));
 });
