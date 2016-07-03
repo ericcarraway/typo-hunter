@@ -2,5 +2,5 @@
 
 // initialize the app
 var typoHunter = {};
-var foo = ['bar'];
+var foo = ['bar', 'test', 'example'];
 var numbers = [1, 2, 3, 4, 5];
