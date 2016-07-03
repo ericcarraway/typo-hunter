@@ -7,8 +7,14 @@ var cssnano = require('gulp-cssnano');
 // compile *.scss files
 gulp.task('build-css', function () {
     return gulp.src([
-        'source/scss/**/*.scss',
-        'source/scss/**/*.css'
+        // since our custom styles may override some vendor styles,
+        // load vendor styles first
+        'source/scss/vendor/*.css',
+        'source/scss/vendor/*.scss',
+
+        // load our custom styles
+        'source/scss/**/*.css',
+        'source/scss/**/*.scss'
         ])
         .pipe(sourcemaps.init())    // process the original sources
         .pipe(concat('styles.css')) // concanate to one file: 'styles.css'
