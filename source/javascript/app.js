@@ -1,4 +1,4 @@
-// start here - compile to public/assets/javascript/bundle.js
+// start here - compile to dist/scripts.js
 
 // initialize the app
 var typoHunter = {};

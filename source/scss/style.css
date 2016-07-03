@@ -1,0 +1,38 @@
+/* start here - compile to dist/styles.css */
+
+/**
+ * position, display
+ * box model: margin (outer), padding (inner)
+ * font, color, text
+ * background, border
+ * CSS3 properties (border-radius, box-shadow)
+ */
+
+body {
+   font-family: 'Montserrat Light', sans-serif;
+   color: #555
+}
+
+div.container {
+    width: 100%;
+    text-align: center;
+}
+
+textarea {
+    font-family: monospace;
+    font-size: 14px;
+    color: #555;
+    padding: 8px;
+    margin: 8px;
+}
+
+a {
+    font-size: 14px;
+    color: #555;
+    padding: 8px;
+    margin: 8px;
+}
+
+div.bottom-buttons {
+    text-align: left;
+}
