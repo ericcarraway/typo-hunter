@@ -10,7 +10,6 @@ node_modules
 *.sublime-*
 .jekyll-metadata
 
-/dist
 /.tmp
 
 /bower_components
