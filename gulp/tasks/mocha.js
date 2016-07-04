@@ -5,7 +5,7 @@ var util = require('gulp-util');
 gulp.task('mocha', function () {
     gulp.src([
         'test/*.js',
-        'source/javascript/**/*.spec.js'
+        'source/scripts/**/*.spec.js'
         ])
         .pipe(mocha({ reporter: 'spec' }))
         .on('error', util.log);
