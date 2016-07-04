@@ -7,7 +7,8 @@ var uglify = require('gulp-uglify');
 gulp.task('build-js', function () {
     return gulp.src([
         'wordlists/js/*.js',
-        'source/javascript/**/*.js'
+        'source/javascript/**/*.js',
+        '!source/javascript/**/*.spec.js' // exclude tests
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('bundle.js'))
