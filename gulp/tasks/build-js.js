@@ -10,7 +10,7 @@ gulp.task('build-js', function () {
         'source/javascript/**/*.js'
         ])
         .pipe(sourcemaps.init())
-        .pipe(concat('scripts.js'))
+        .pipe(concat('bundle.js'))
 
         // run this command to minify/uglify:
         // $ gulp --type production

@@ -17,7 +17,7 @@ gulp.task('build-css', function () {
         'source/scss/**/*.scss'
         ])
         .pipe(sourcemaps.init())    // process the original sources
-        .pipe(concat('styles.css')) // concanate to one file: 'styles.css'
+        .pipe(concat('bundle.css')) // concanate to one file: 'bundle.css'
         .pipe(sass())               // convert sass to css
         .pipe(cssnano())            // minify css
         .pipe(sourcemaps.write())   // add the map to the modified source
