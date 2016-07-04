@@ -9172,6 +9172,10 @@ app.newlineToSpace = function () {
     domManip.setTextarea(words);
 };
 
+// module.exports = function (a, b) {
+//     return a + b;
+// };
+
 // start here - compile to dist/scripts.js
 
 // initialize the app
@@ -9190,7 +9194,30 @@ domManip.setTextarea = function (str) {
     document.getElementsByName('textarea')[0].value = str;
 };
 
-module.exports = 'indeed';
+(function () {
+    'use strict';
+    var self = this;
+
+    var addTwoNumbers = function (a, b) {
+        return a + b;
+    };
+
+    // make this module available to both Node and the browser
+    // this is what underscore.js does:
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
+            exports = module.exports = addTwoNumbers;
+        }
+        exports.addTwoNumbers = addTwoNumbers;
+    } else {
+        self.addTwoNumbers = addTwoNumbers;
+    }
+}).call(this);
+
+// http://www.richardrodger.com/
+// 2013/09/27/how-to-make-simple-node-js-modules-work-in-the-browser/
+
+// http://stackoverflow.com/questions/12571737/module-exports-client-side
 
 var textUtil = textUtil || {};
 
