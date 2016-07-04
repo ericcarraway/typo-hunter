@@ -124,5 +124,5 @@ wordlists.papa = [
     'unreachable',
     'unused',
     'unwieldy',
-    'vacuum',
+    'vacuum'
 ];
