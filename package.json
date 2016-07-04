@@ -20,16 +20,19 @@
   },
   "homepage": "https://github.com/ericcarraway/typo-hunter#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-jshint": "^2.0.1",
+    "gulp-mocha": "^2.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.4",
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
+    "mocha": "^2.5.3",
     "require-dir": "^0.3.0"
   }
 }
