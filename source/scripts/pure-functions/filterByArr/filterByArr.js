@@ -5,12 +5,27 @@
  * @return {array}
  */
 
-filterByArr = function (inputArr, filterArr) {
-    // return false if input is filterArr
-    // return true if input is NOT in filterArr
-    var isAllowed = function (input) {
-        return filterArr.indexOf(input) === -1;
+(function () {
+    'use strict';
+    var root = this;
+
+    var filterByArr = function (inputArr, filterArr) {
+        // return false if input is in the filterArr
+        // return true if input is NOT in the filterArr
+        var isAllowed = function (input) {
+            return filterArr.indexOf(input) === -1;
+        };
+
+        return inputArr.filter(isAllowed);
     };
 
-    return inputArr.filter(isAllowed);
-};
+    // boilerplate: make filterByArr available to both Node.js and the browser
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
+            exports = module.exports = filterByArr;
+        }
+        exports.filterByArr = filterByArr;
+    } else {
+        root.filterByArr = filterByArr;
+    }
+}).call(this);
