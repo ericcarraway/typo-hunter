@@ -9190,6 +9190,8 @@ domManip.setTextarea = function (str) {
     document.getElementsByName('textarea')[0].value = str;
 };
 
+module.exports = 'indeed';
+
 var textUtil = textUtil || {};
 
 textUtil.uniqueWords = function (str) {
