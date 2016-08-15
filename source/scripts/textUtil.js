@@ -254,6 +254,15 @@ textUtil.filterGitHub = function (str) {
     return returnArr.sort().join('\n');
 };
 
+textUtil.filterNumbers = function (str) {
+    var arr;
+
+    str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
+    arr = str.split(' ');
+
+    return filterNumbers(arr).join('\n');
+};
+
 // 2016-02-29
 // experimenting with punctuation removal via regex
 textUtil.removePunctuation = function (str) {
