@@ -1,5 +1,11 @@
 var textUtil = textUtil || {};
 
+textUtil.trim = function (str) {
+    var arrayOfLines = str.match(/[^\r\n]+/g);
+    arrayOfLines = arrayOfLines.map(function (line) { return line.trim(); });
+    return arrayOfLines.join('\n');
+};
+
 textUtil.uniqueWords = function (str) {
     var arrOfWords;
     var limit;

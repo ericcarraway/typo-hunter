@@ -7759,7 +7759,7 @@ wordlists.papa = [
     'unreachable',
     'unused',
     'unwieldy',
-    'vacuum',
+    'vacuum'
 ];
 
 var wordlists = wordlists || {};
@@ -9308,6 +9308,12 @@ app.newlineToSpace = function () {
     domManip.setTextarea(words);
 };
 
+app.trim = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.trim(words);
+    domManip.setTextarea(words);
+};
+
 // start here - compile to dist/scripts.js
 
 // initialize the app
@@ -9327,6 +9333,12 @@ domManip.setTextarea = function (str) {
 };
 
 var textUtil = textUtil || {};
+
+textUtil.trim = function (str) {
+    var arrayOfLines = str.match(/[^\r\n]+/g);
+    arrayOfLines = arrayOfLines.map(function (line) { return line.trim(); });
+    return arrayOfLines.join('\n');
+};
 
 textUtil.uniqueWords = function (str) {
     var arrOfWords;
