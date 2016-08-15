@@ -71,3 +71,9 @@ app.newlineToSpace = function () {
     words = textUtil.newlineToSpace(words);
     domManip.setTextarea(words);
 };
+
+app.trim = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.trim(words);
+    domManip.setTextarea(words);
+};
