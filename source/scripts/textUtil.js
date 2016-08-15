@@ -6,6 +6,12 @@ textUtil.trim = function (str) {
     return arrayOfLines.join('\n');
 };
 
+textUtil.filterEmptyLines = function (str) {
+    var arrayOfLines = str.match(/[^\r\n]+/g);
+    arrayOfLines.filter(function (line) { return line.trim() !== ''; });
+    return arrayOfLines.join('\n');
+};
+
 textUtil.uniqueWords = function (str) {
     var arrOfWords;
     var limit;

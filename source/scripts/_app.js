@@ -77,3 +77,9 @@ app.trim = function () {
     words = textUtil.trim(words);
     domManip.setTextarea(words);
 };
+
+app.filterEmptyLines = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.filterEmptyLines(words);
+    domManip.setTextarea(words);
+};
