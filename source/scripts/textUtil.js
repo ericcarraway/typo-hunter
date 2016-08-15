@@ -48,7 +48,6 @@ textUtil.filterCommonProse = function (str) {
     var word;
     var prose;
     var returnArr = [];
-    var i;
 
     // remove line breaks
     str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
@@ -69,13 +68,7 @@ textUtil.filterCommonProse = function (str) {
         wordlists.aspell
     );
 
-    for (i = 0; i < arr.length; i++) {
-        // if the word in question does not exist in the array,
-        // add it to the array
-        if (prose.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+    returnArr = filterByArr(arr, prose);
 
     return returnArr.sort().join('\n');
 };
@@ -83,7 +76,6 @@ textUtil.filterCommonProse = function (str) {
 textUtil.filterTmProse = function (str) {
     var arr;
     var word;
-    var i;
     var returnArr = [];
 
     // remove line breaks
@@ -97,13 +89,7 @@ textUtil.filterTmProse = function (str) {
         arr[word] = arr[word].trim();
     }
 
-    for (i = 0; i < arr.length; i++) {
-        // if the word in question does not exist in the array,
-        // add it to the array
-        if (wordlists.motto.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+    returnArr = filterByArr(arr, wordlists.motto);
 
     return returnArr.sort().join('\n');
 };
@@ -112,7 +98,6 @@ textUtil.filterAlice = function (str) {
     var arr;
     var word;
     var returnArr = [];
-    var i;
 
     // remove line breaks
     str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
@@ -125,15 +110,7 @@ textUtil.filterAlice = function (str) {
         arr[word] = arr[word].trim();
     }
 
-    returnArr = [];
-
-    for (i = 0; i < arr.length; i++) {
-        // if the word in question does not exist in the array,
-        // add it to the array
-        if (wordlists.alice.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+    returnArr = filterByArr(arr, wordlists.alice);
 
     return returnArr.sort().join('\n');
 };
@@ -141,7 +118,6 @@ textUtil.filterAlice = function (str) {
 textUtil.filter_2016_04_07 = function (str) {
     var arr;
     var word;
-    var i;
     var returnArr = [];
 
     // remove line breaks
@@ -155,13 +131,7 @@ textUtil.filter_2016_04_07 = function (str) {
         arr[word] = arr[word].trim();
     }
 
-    for (i = 0; i < arr.length; i++) {
-        // if the word in question does not exist in the array,
-        // add it to the array
-        if (wordlists._2016_04_07.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+    returnArr = filterByArr(arr, wordlists._2016_04_07);
 
     return returnArr.sort().join('\n');
 };
@@ -169,7 +139,6 @@ textUtil.filter_2016_04_07 = function (str) {
 textUtil.filter_2016_04_25 = function (str) {
     var arr;
     var word;
-    var i;
     var returnArr = [];
 
     // remove line breaks
@@ -183,13 +152,7 @@ textUtil.filter_2016_04_25 = function (str) {
         arr[word] = arr[word].trim();
     }
 
-    for (i = 0; i < arr.length; i++) {
-        // if the word in question does not exist in the array,
-        // add it to the array
-        if (wordlists._2016_04_25.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+    returnArr = filterByArr(arr, wordlists._2016_04_25);
 
     return returnArr.sort().join('\n');
 };
@@ -197,7 +160,6 @@ textUtil.filter_2016_04_25 = function (str) {
 textUtil.filter_2016_05_14 = function (str) {
     var arr;
     var word;
-    var i;
     var returnArr = [];
 
     str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
@@ -206,18 +168,15 @@ textUtil.filter_2016_05_14 = function (str) {
     for (word = 0; word < arr.length; word++) {
         arr[word] = arr[word].trim();
     }
-    for (i = 0; i < arr.length; i++) {
-        if (wordlists._2016_05_14.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+
+    returnArr = filterByArr(arr, wordlists._2016_05_14);
+
     return returnArr.sort().join('\n');
 };
 
 textUtil.filterPapa = function (str) {
     var arr;
     var word;
-    var i;
     var returnArr = [];
 
     str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
@@ -226,13 +185,8 @@ textUtil.filterPapa = function (str) {
     for (word = 0; word < arr.length; word++) {
         arr[word] = arr[word].trim();
     }
-    for (i = 0; i < arr.length; i++) {
-        // if the word in question does not exist in the array,
-        // add it to the array
-        if (wordlists.papa.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+
+    returnArr = filterByArr(arr, wordlists.papa);
 
     return returnArr.sort().join('\n');
 };
@@ -240,7 +194,6 @@ textUtil.filterPapa = function (str) {
 textUtil.filterAirbnb = function (str) {
     var arr;
     var word;
-    var i;
     var returnArr = [];
 
     str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
@@ -249,18 +202,15 @@ textUtil.filterAirbnb = function (str) {
     for (word = 0; word < arr.length; word++) {
         arr[word] = arr[word].trim();
     }
-    for (i = 0; i < arr.length; i++) {
-        if (wordlists.airbnb.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+
+    returnArr = filterByArr(arr, wordlists.airbnb);
+
     return returnArr.sort().join('\n');
 };
 
 textUtil.filterAngular1 = function (str) {
     var arr;
     var word;
-    var i;
     var returnArr = [];
 
     str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
@@ -269,18 +219,15 @@ textUtil.filterAngular1 = function (str) {
     for (word = 0; word < arr.length; word++) {
         arr[word] = arr[word].trim();
     }
-    for (i = 0; i < arr.length; i++) {
-        if (wordlists.angular_1.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+
+    returnArr = filterByArr(arr, wordlists.angular_1);
+
     return returnArr.sort().join('\n');
 };
 
 textUtil.filterRxPageObjects = function (str) {
     var arr;
     var word;
-    var i;
     var returnArr = [];
 
     str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
@@ -289,31 +236,21 @@ textUtil.filterRxPageObjects = function (str) {
     for (word = 0; word < arr.length; word++) {
         arr[word] = arr[word].trim();
     }
-    for (i = 0; i < arr.length; i++) {
-        if (wordlists.rxPageObjects.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+
+    returnArr = filterByArr(arr, wordlists.rxPageObjects);
+
     return returnArr.sort().join('\n');
 };
 
 textUtil.filterGitHub = function (str) {
     var arr;
-    var word;
-    var i;
     var returnArr = [];
 
     str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
     arr = str.split(' ');
 
-    for (word = 0; word < arr.length; word++) {
-        arr[word] = arr[word].trim();
-    }
-    for (i = 0; i < arr.length; i++) {
-        if (wordlists.github.indexOf(arr[i]) === -1) {
-            returnArr.push(arr[i]);
-        }
-    }
+    returnArr = filterByArr(arr, wordlists.github);
+
     return returnArr.sort().join('\n');
 };
 
