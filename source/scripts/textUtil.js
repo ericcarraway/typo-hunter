@@ -313,7 +313,12 @@ textUtil.removePunctuation = function (str) {
         '{', // openCurlyBrace
         '\\|', // pipe
         '}', // closeCurlyBrace
-        '~' // tilde
+        '~', // tilde
+        '\t', // tab character
+        '→', // arrow
+        '✓', // checkMark
+        '✔', // Mocha pass
+        '✖' // Mocha fail
     ];
     regexes = regexes.join('|');
     regExp = new RegExp(regexes, 'g');
@@ -323,7 +328,3 @@ textUtil.removePunctuation = function (str) {
 textUtil.newlineToSpace = function (str) {
     return str.replace(/\n/g, ' ');
 };
-
-//  tab character: '	'
-//  arrow: '→'
-//  checkMark: '✓'
