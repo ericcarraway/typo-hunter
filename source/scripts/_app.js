@@ -60,6 +60,12 @@ app.filterAngular1 = function () {
     domManip.setTextarea(words);
 };
 
+app.filterRxPageObjects = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.filterRxPageObjects(words);
+    domManip.setTextarea(words);
+};
+
 app.removeAllPunctuation = function () {
     var words = domManip.getTextarea();
     words = textUtil.removePunctuation(words);

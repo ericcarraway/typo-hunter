@@ -24,3 +24,7 @@
 
 2016-05-14
 * `2016-05-14.js` - 434 words
+
+2016-08-14
+* `rxPageObjects.js` - 235 new whitelist words from various sources, including
+http://rackerlabs.github.io/encore-ui/rx-page-objects/index.html
