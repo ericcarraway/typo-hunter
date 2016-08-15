@@ -66,6 +66,12 @@ app.filterRxPageObjects = function () {
     domManip.setTextarea(words);
 };
 
+app.filterGitHub = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.filterGitHub(words);
+    domManip.setTextarea(words);
+};
+
 app.removeAllPunctuation = function () {
     var words = domManip.getTextarea();
     words = textUtil.removePunctuation(words);

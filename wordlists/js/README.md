@@ -28,3 +28,6 @@
 2016-08-14
 * `rxPageObjects.js` - 235 new whitelist words from various sources, including
 http://rackerlabs.github.io/encore-ui/rx-page-objects/index.html
+
+2016-08-14
+* `github.js` - 68 words from GitHub Issues and Pull Request pages

@@ -297,6 +297,26 @@ textUtil.filterRxPageObjects = function (str) {
     return returnArr.sort().join('\n');
 };
 
+textUtil.filterGitHub = function (str) {
+    var arr;
+    var word;
+    var i;
+    var returnArr = [];
+
+    str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
+    arr = str.split(' ');
+
+    for (word = 0; word < arr.length; word++) {
+        arr[word] = arr[word].trim();
+    }
+    for (i = 0; i < arr.length; i++) {
+        if (wordlists.github.indexOf(arr[i]) === -1) {
+            returnArr.push(arr[i]);
+        }
+    }
+    return returnArr.sort().join('\n');
+};
+
 // 2016-02-29
 // experimenting with punctuation removal via regex
 textUtil.removePunctuation = function (str) {
@@ -315,6 +335,7 @@ textUtil.removePunctuation = function (str) {
         '\\+', // plusSign
         ',', // comma
         '-', // hyphen
+        '—', // emdash?
         '\\.', // period
         '/', // forwardSlash
         ':', // colon
