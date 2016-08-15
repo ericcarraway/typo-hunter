@@ -95,3 +95,9 @@ app.filterEmptyLines = function () {
     words = textUtil.filterEmptyLines(words);
     domManip.setTextarea(words);
 };
+
+app.filterNumbers = function () {
+    var words = domManip.getTextarea();
+    words = textUtil.filterNumbers(words);
+    domManip.setTextarea(words);
+};
