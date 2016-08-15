@@ -277,6 +277,26 @@ textUtil.filterAngular1 = function (str) {
     return returnArr.sort().join('\n');
 };
 
+textUtil.filterRxPageObjects = function (str) {
+    var arr;
+    var word;
+    var i;
+    var returnArr = [];
+
+    str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
+    arr = str.split(' ');
+
+    for (word = 0; word < arr.length; word++) {
+        arr[word] = arr[word].trim();
+    }
+    for (i = 0; i < arr.length; i++) {
+        if (wordlists.rxPageObjects.indexOf(arr[i]) === -1) {
+            returnArr.push(arr[i]);
+        }
+    }
+    return returnArr.sort().join('\n');
+};
+
 // 2016-02-29
 // experimenting with punctuation removal via regex
 textUtil.removePunctuation = function (str) {
@@ -318,7 +338,9 @@ textUtil.removePunctuation = function (str) {
         '→', // arrow
         '✓', // checkMark
         '✔', // Mocha pass
-        '✖' // Mocha fail
+        '✖', // Mocha fail
+        '©', // copyright
+        '·' // dot
     ];
     regexes = regexes.join('|');
     regExp = new RegExp(regexes, 'g');
