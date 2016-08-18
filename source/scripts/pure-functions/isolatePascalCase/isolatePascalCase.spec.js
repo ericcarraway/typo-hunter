@@ -1,3 +1,5 @@
+/* jshint expr: true */
+
 var isolatePascalCase = require('./isolatePascalCase.js');
 var expect = require('chai').expect;
 

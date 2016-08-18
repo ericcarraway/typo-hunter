@@ -1,3 +1,5 @@
+/* jshint expr: true */
+
 var isolateCamelCase = require('./isolateCamelCase.js');
 var expect = require('chai').expect;
 

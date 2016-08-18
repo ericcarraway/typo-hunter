@@ -13,25 +13,14 @@ textUtil.filterEmptyLines = function (str) {
 };
 
 textUtil.uniqueWords = function (str) {
-    var arrOfWords;
     var limit;
     var i;
     var returnArr = [];
 
-    // strip whitespace
-    // space, carriage return (\r), tab (\t), new line (\n)
-    // whitespace special character \s will match any whitespace
-    str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
-
-    // split words
-    arrOfWords = str.split(' ');
+    var arrOfWords = stringToArrayOfWords(str);
 
     limit = arrOfWords.length;
     for (i = 0; i < limit; i++) {
-        // if this is the empty string, skip over this iteration of the loop
-        if (arrOfWords[i] === '') {
-            continue;
-        }
         // if the word in question does not already exist in the return array
         if (returnArr.indexOf(arrOfWords[i]) === - 1) {
             // then add it to the return array
@@ -44,33 +33,17 @@ textUtil.uniqueWords = function (str) {
 };
 
 textUtil.filterCommonProse = function (str) {
-    var arr;
-    var word;
-    var prose;
-    var returnArr = [];
-
-    // remove line breaks
-    str = str.replace(/(\s|\r\n|\n|\r)/gm, ' ');
-
-    // split words
-    arr = str.split(' ');
-
-    // trim words
-    for (word = 0; word < arr.length; word++) {
-        arr[word] = arr[word].trim();
-    }
+    var arrOfWords = stringToArrayOfWords(str);
 
     // bring together word lists
     // currently 4,179 unique words
-    prose = [].concat(
+    var prose = [].concat(
         wordlists.deekayen,
         wordlists.splasho,
         wordlists.aspell
     );
 
-    returnArr = filterByArr(arr, prose);
-
-    return returnArr.sort().join('\n');
+    return filterByArr(arrOfWords, prose).sort().join('\n');
 };
 
 textUtil.filterTmProse = function (str) {
