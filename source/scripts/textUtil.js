@@ -236,59 +236,8 @@ textUtil.filterNumbers = function (str) {
     return filterNumbers(arr).join('\n');
 };
 
-// 2016-02-29
-// experimenting with punctuation removal via regex
 textUtil.removePunctuation = function (str) {
-    var regExp;
-    var regexes = [
-        '!', // exclamationPoint
-        '"', // doubleQuote
-        '#', // numberSign
-        '\\$', // dollarSign
-        '%', // percentSign
-        '&', // ampersand
-        '\'', // singleQuote
-        '\\(', // openParentheses
-        '\\)', // closeParentheses
-        '\\*', // asterisk
-        '\\+', // plusSign
-        ',', // comma
-        '-', // hyphen
-        '—', // emdash?
-        '\\.', // period
-        '/', // forwardSlash
-        ':', // colon
-        ';', // semicolon
-        '<', // lessThan
-        '=', // equalsSign
-        '>', // greaterThan
-        '\\?', // questionMark
-        '@', // atSign
-        '\\[', // openSquareBracket
-        '\\\\', // backslash
-        ']', // closeSquareBracket
-        '\\^', // caret
-        '_', // underscore
-        '`', // backtick
-        '{', // openCurlyBrace
-        '\\|', // pipe
-        '}', // closeCurlyBrace
-        '~', // tilde
-        '\t', // tab character
-        '→', // arrow
-        '✓', // checkMark
-        '✔', // Mocha pass
-        '✖', // Mocha fail
-        '©', // copyright
-        '·', // dot
-        '“', // smart double quote left
-        '”', // smart double quote right 1
-        '″', // smart double quote right 2
-        '’' // smart single quote right
-    ];
-    regexes = regexes.join('|');
-    regExp = new RegExp(regexes, 'g');
-    return str.replace(regExp, ' ');
+    return removePunctuation(str);
 };
 
 textUtil.newlineToSpace = function (str) {
