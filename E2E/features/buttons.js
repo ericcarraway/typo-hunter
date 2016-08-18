@@ -35,48 +35,6 @@ describe('buttons', function () {
         browser.click(btnSelector);
 
         actualText = browser.getValue('textarea');
-
         expect(actualText).to.equal(expectedText);
-    });
-
-    describe('remove punctuation button', function () {
-        var btnSelector = 'button=remove punctuation';
-
-        var inputText;
-        var expectedText;
-        var actualText;
-
-        it('should remove basic punctuation', function () {
-            inputText = "Let's eat, Grandpa!";
-            expectedText = 'Let s eat  Grandpa';
-
-            browser.setValue('textarea', inputText);
-            browser.click(btnSelector);
-
-            actualText = browser.getValue('textarea');
-            expect(actualText).to.equal(expectedText);
-        });
-
-        it('should remove ~!@#$%^&*()_+', function () {
-            inputText = 'foo~!@#$%^&*()_+bar';
-            expectedText = 'foo             bar';
-
-            browser.setValue('textarea', inputText);
-            browser.click(btnSelector);
-
-            actualText = browser.getValue('textarea');
-            expect(actualText).to.equal(expectedText);
-        });
-
-        it('should remove {}[]|;:', function () {
-            inputText = 'baz{}[]|;:qux';
-            expectedText = 'baz       qux';
-
-            browser.setValue('textarea', inputText);
-            browser.click(btnSelector);
-
-            actualText = browser.getValue('textarea');
-            expect(actualText).to.equal(expectedText);
-        });
     });
 });
