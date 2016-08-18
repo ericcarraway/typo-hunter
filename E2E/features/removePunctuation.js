@@ -81,5 +81,16 @@ describe('buttons', function () {
             actualText = browser.getValue('textarea');
             expect(actualText).to.equal(expectedText);
         });
+
+        it('7', function () {
+            inputText = 'foo “ ” ″ ’ bar';
+            expectedText = 'foo         bar';
+
+            browser.setValue('textarea', inputText);
+            browser.click(btnSelector);
+
+            actualText = browser.getValue('textarea');
+            expect(actualText).to.equal(expectedText);
+        });
     });
 });

@@ -307,7 +307,11 @@ textUtil.removePunctuation = function (str) {
         '✔', // Mocha pass
         '✖', // Mocha fail
         '©', // copyright
-        '·' // dot
+        '·', // dot
+        '“', // smart double quote left
+        '”', // smart double quote right 1
+        '″', // smart double quote right 2
+        '’' // smart single quote right
     ];
     regexes = regexes.join('|');
     regExp = new RegExp(regexes, 'g');
