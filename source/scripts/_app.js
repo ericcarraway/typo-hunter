@@ -101,3 +101,11 @@ app.filterNumbers = function () {
     words = textUtil.filterNumbers(words);
     domManip.setTextarea(words);
 };
+
+app.removeContractions = function () {
+    var words = domManip.getTextarea();
+    var arrayOfWords = stringToArrayOfWords(words);
+    arrayOfWords = removeContractions(arrayOfWords);
+    arrayOfWords = arrayOfWords.join('\n');
+    domManip.setTextarea(arrayOfWords);
+};

@@ -11,11 +11,11 @@ describe('initial tests', function () {
         expect(title).to.equal('typo-hunter.com');
     });
 
-    it('should have 17 buttons', function () {
+    it('should have 18 buttons', function () {
         var selector = 'button';
         var elements = browser.elements(selector);
 
-        expect(elements.value.length).to.equal(17);
+        expect(elements.value.length).to.equal(18);
     });
 
     it('should have the correct button text', function () {
@@ -38,7 +38,8 @@ describe('initial tests', function () {
             'newline to space',
             'remove empty lines',
             'GH PR',
-            'remove numbers'
+            'remove numbers',
+            'remove contractions'
         ];
 
         arrayBtnTxtActual = browser.getText(selector);

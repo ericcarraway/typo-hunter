@@ -3,7 +3,7 @@
 var removeContractions = require('./removeContractions.js');
 var expect = require('chai').expect;
 
-describe.only('removeContractions', function () {
+describe('removeContractions', function () {
     var input;
 
     describe('smoke tests', function () {
