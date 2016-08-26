@@ -1,7 +1,7 @@
 var wordlists = wordlists || {};
 
 // 2016-08-14
-// 68 words from GitHub Issues and Pull Request pages
+// 76 words from GitHub Issues and Pull Request pages
 wordlists.github = [
     'All',
     'API',
