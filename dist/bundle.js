@@ -5836,6 +5836,7 @@ var wordlists = wordlists || {};
 // 2016-08-14
 // 68 words from GitHub Issues and Pull Request pages
 wordlists.github = [
+    'All',
     'API',
     'About',
     'Add',
@@ -5853,6 +5854,7 @@ wordlists.github = [
     'Continuous',
     'Conversation',
     'Delete',
+    'Depending',
     'Edit',
     'Files',
     'Fork',
@@ -5877,9 +5879,12 @@ wordlists.github = [
     'None',
     'Notifications',
     'Open',
+    'Options',
     'Owner',
+    'Participating',
     'Preview',
     'Privacy',
+    'Private',
     'ProTip',
     'Pull',
     'Pulse',
@@ -5897,8 +5902,11 @@ wordlists.github = [
     'Terms',
     'This',
     'Training',
+    'Unread',
+    'Unstar',
     'Unsubscribe',
     'Unwatch',
+    'Watching',
     'Wiki',
     'Write',
     'You’re',
@@ -9418,6 +9426,38 @@ var top1000_deekayen = [
 ];
 
 /**
+ * Filter from the input values contained in the filter arr
+ * @param {array} inputArr - an unfiltered array
+ * @param {array} filterArr - an array of values to filter out
+ * @return {array}
+ */
+
+(function () {
+    'use strict';
+    var root = this;
+
+    var filterByArr = function (inputArr, filterArr) {
+        // return false if input is in the filterArr
+        // return true if input is NOT in the filterArr
+        var isAllowed = function (input) {
+            return filterArr.indexOf(input) === -1;
+        };
+
+        return inputArr.filter(isAllowed);
+    };
+
+    // boilerplate: make filterByArr available to both Node.js and the browser
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
+            exports = module.exports = filterByArr;
+        }
+        exports.filterByArr = filterByArr;
+    } else {
+        root.filterByArr = filterByArr;
+    }
+}).call(this);
+
+/**
  * Filter numbers from an array
  * @param {array} arr
  * @return {array}
@@ -9498,6 +9538,32 @@ var top1000_deekayen = [
         exports.isolateFourCharWords = isolateFourCharWords;
     } else {
         root.isolateFourCharWords = isolateFourCharWords;
+    }
+}).call(this);
+
+(function () {
+    'use strict';
+    var root = this;
+
+    var isolatePascalCase = function (arr) {
+        // still needs work - fooBar should NOT pass
+        var pascalCase = new RegExp(/[A-Z]([A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])[A-Za-z0-9]*/);
+
+        return arr.filter(isPascalCase);
+
+        function isPascalCase(word) {
+            return /[A-Z]/.test(word[0]) && pascalCase.test(word);
+        }
+    };
+
+    // boilerplate: make isolatePascalCase available to both Node.js and the browser
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
+            exports = module.exports = isolatePascalCase;
+        }
+        exports.isolatePascalCase = isolatePascalCase;
+    } else {
+        root.isolatePascalCase = isolatePascalCase;
     }
 }).call(this);
 
@@ -9684,64 +9750,6 @@ var top1000_deekayen = [
     }
 }).call(this);
 
-/**
- * Filter from the input values contained in the filter arr
- * @param {array} inputArr - an unfiltered array
- * @param {array} filterArr - an array of values to filter out
- * @return {array}
- */
-
-(function () {
-    'use strict';
-    var root = this;
-
-    var filterByArr = function (inputArr, filterArr) {
-        // return false if input is in the filterArr
-        // return true if input is NOT in the filterArr
-        var isAllowed = function (input) {
-            return filterArr.indexOf(input) === -1;
-        };
-
-        return inputArr.filter(isAllowed);
-    };
-
-    // boilerplate: make filterByArr available to both Node.js and the browser
-    if (typeof exports !== 'undefined') {
-        if (typeof module !== 'undefined' && module.exports) {
-            exports = module.exports = filterByArr;
-        }
-        exports.filterByArr = filterByArr;
-    } else {
-        root.filterByArr = filterByArr;
-    }
-}).call(this);
-
-(function () {
-    'use strict';
-    var root = this;
-
-    var isolatePascalCase = function (arr) {
-        // still needs work - fooBar should NOT pass
-        var pascalCase = new RegExp(/[A-Z]([A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])[A-Za-z0-9]*/);
-
-        return arr.filter(isPascalCase);
-
-        function isPascalCase(word) {
-            return /[A-Z]/.test(word[0]) && pascalCase.test(word);
-        }
-    };
-
-    // boilerplate: make isolatePascalCase available to both Node.js and the browser
-    if (typeof exports !== 'undefined') {
-        if (typeof module !== 'undefined' && module.exports) {
-            exports = module.exports = isolatePascalCase;
-        }
-        exports.isolatePascalCase = isolatePascalCase;
-    } else {
-        root.isolatePascalCase = isolatePascalCase;
-    }
-}).call(this);
-
 (function () {
     'use strict';
     var root = this;
@@ -9814,6 +9822,30 @@ var top1000_deekayen = [
     'use strict';
     var root = this;
 
+    var sortByLength = function (arr) {
+        return arr.sort(comparatorFn);
+
+        function comparatorFn(a, b) {
+          return a.length - b.length || // sort by length, if equal then
+                 a.localeCompare(b);    // sort by dictionary order
+        }
+    };
+
+    // boilerplate: make sortByLength available to both Node.js and the browser
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
+            exports = module.exports = sortByLength;
+        }
+        exports.sortByLength = sortByLength;
+    } else {
+        root.sortByLength = sortByLength;
+    }
+}).call(this);
+
+(function () {
+    'use strict';
+    var root = this;
+
     var stringToArrayOfWords = function (str) {
         // strip whitespace
         // space, carriage return (\r), tab (\t), new line (\n)
@@ -9854,30 +9886,6 @@ var top1000_deekayen = [
         exports.unique = unique;
     } else {
         root.unique = unique;
-    }
-}).call(this);
-
-(function () {
-    'use strict';
-    var root = this;
-
-    var sortByLength = function (arr) {
-        return arr.sort(comparatorFn);
-
-        function comparatorFn(a, b) {
-          return a.length - b.length || // sort by length, if equal then
-                 a.localeCompare(b);    // sort by dictionary order
-        }
-    };
-
-    // boilerplate: make sortByLength available to both Node.js and the browser
-    if (typeof exports !== 'undefined') {
-        if (typeof module !== 'undefined' && module.exports) {
-            exports = module.exports = sortByLength;
-        }
-        exports.sortByLength = sortByLength;
-    } else {
-        root.sortByLength = sortByLength;
     }
 }).call(this);
 
