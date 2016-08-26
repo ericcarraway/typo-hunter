@@ -31,3 +31,6 @@ http://rackerlabs.github.io/encore-ui/rx-page-objects/index.html
 
 2016-08-14
 * `github.js` - 68 words from GitHub Issues and Pull Request pages
+
+2016-08-26
+* `github.js` - add 8 words
