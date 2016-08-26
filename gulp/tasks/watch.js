@@ -6,7 +6,7 @@ gulp.task('watch', function () {
     var message = '\'watch\' started from gulp/tasks/watch.js';
 
     // scripts
-    gulp.watch('source/scripts/**/*.js', ['jshint', 'build-js']);
+    gulp.watch('source/scripts/**/*.js', ['jshint', 'build-js', 'mocha']);
 
     // styles
     gulp.watch([

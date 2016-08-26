@@ -84,7 +84,6 @@
         function isNotContraction(word) {
             return contractions.indexOf(word) === -1;
         }
-
     };
 
     // boilerplate: make removeContractions available to both Node.js and the browser

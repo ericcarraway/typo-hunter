@@ -1,7 +1,7 @@
 var isolateFourCharWords = require('./isolateFourCharWords.js');
 var expect = require('chai').expect;
 
-describe.only('isolateFourCharWords', function () {
+describe('isolateFourCharWords', function () {
     var actual;
     var expected;
 
@@ -22,7 +22,7 @@ describe.only('isolateFourCharWords', function () {
             'a',
             'four',
             'letter',
-            'word',
+            'word'
         ]);
         expected = [
             'test',
