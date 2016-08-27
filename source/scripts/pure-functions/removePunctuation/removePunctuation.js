@@ -48,7 +48,47 @@
             '“', // smart double quote left
             '”', // smart double quote right 1
             '″', // smart double quote right 2
-            '’' // smart single quote right
+            '’', // smart single quote right
+            '¡',
+            '¢',
+            '£',
+            '¤',
+            '¥',
+            '¦',
+            '§',
+            '¨',
+            'ª',
+            '«',
+            '¬',
+            '®',
+            '¯',
+            '°',
+            '±',
+            '²',
+            '³',
+            '´',
+            'µ',
+            '¶',
+            '¸',
+            '¹',
+            'º',
+            '»',
+            '¼',
+            '½',
+            '¾',
+            '¿',
+            '‘',
+            '‚',
+            '„',
+            '†',
+            '‡',
+            '•',
+            '…',
+            '‰',
+            '€',
+            '™',
+            '➜',
+            '👍'
         ];
         regexes = regexes.join('|');
         regExp = new RegExp(regexes, 'g');

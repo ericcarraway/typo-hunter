@@ -98,6 +98,24 @@ describe('removePunctuation', function () {
         expect(removePunctuation(input)).to.eql(expected);
     });
 
+    it("should remove a 'thumbs-up' emoji", function () {
+        var input    = 'foo👍bar';
+        var expected = 'foo bar';
+        expect(removePunctuation(input)).to.eql(expected);
+    });
+
+    it("should remove a 'fat arrow' character", function () {
+        var input    = 'foo➜bar';
+        var expected = 'foo bar';
+        expect(removePunctuation(input)).to.eql(expected);
+    });
+
+    it("should remove a 'registered trademark' character", function () {
+        var input    = 'foo®bar';
+        var expected = 'foo bar';
+        expect(removePunctuation(input)).to.eql(expected);
+    });
+
     it("should remove a 'double quote' character", function () {
         var input    = 'foo\"bar';
         var expected = 'foo bar';

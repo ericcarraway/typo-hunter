@@ -92,5 +92,38 @@ describe('buttons', function () {
             actualText = browser.getValue('textarea');
             expect(actualText).to.equal(expectedText);
         });
+
+        it('should filter thumbs-up emoji', function () {
+            inputText = 'foo 👍 bar';
+            expectedText = 'foo   bar';
+
+            browser.setValue('textarea', inputText);
+            browser.click(btnSelector);
+
+            actualText = browser.getValue('textarea');
+            expect(actualText).to.equal(expectedText);
+        });
+
+        it('should filter fat arrow', function () {
+            inputText = 'foo ➜ bar';
+            expectedText = 'foo   bar';
+
+            browser.setValue('textarea', inputText);
+            browser.click(btnSelector);
+
+            actualText = browser.getValue('textarea');
+            expect(actualText).to.equal(expectedText);
+        });
+
+        it('should filter registered trademark symbol', function () {
+            inputText = 'foo ® bar';
+            expectedText = 'foo   bar';
+
+            browser.setValue('textarea', inputText);
+            browser.click(btnSelector);
+
+            actualText = browser.getValue('textarea');
+            expect(actualText).to.equal(expectedText);
+        });
     });
 });
