@@ -11,11 +11,11 @@ describe('initial tests', function () {
         expect(title).to.equal('typo-hunter.com');
     });
 
-    it('should have 18 buttons', function () {
+    it('should have 19 buttons', function () {
         var selector = 'button';
         var elements = browser.elements(selector);
 
-        expect(elements.value.length).to.equal(18);
+        expect(elements.value.length).to.equal(19);
     });
 
     it('should have the correct button text', function () {
@@ -35,6 +35,7 @@ describe('initial tests', function () {
             'angular docs',
             'rxPageObjects',
             '2016-05-14',
+            '2016-08-26',
             'newline to space',
             'remove empty lines',
             'GH PR',

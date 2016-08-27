@@ -42,6 +42,14 @@ app.filter_2016_05_14 = function () {
     domManip.setTextarea(words);
 };
 
+app.filter_2016_08_26 = function () {
+    var words = domManip.getTextarea();
+    var arrayOfWords = stringToArrayOfWords(words);
+    arrayOfWords = filterByArr(arrayOfWords, wordlists._2016_08_26);
+    arrayOfWords = arrayOfWords.join('\n');
+    domManip.setTextarea(arrayOfWords);
+};
+
 app.filterPapa = function () {
     var words = domManip.getTextarea();
     words = textUtil.filterPapa(words);
