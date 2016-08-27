@@ -5,9 +5,6 @@ isolate four letter words
 lowercase
 
 add to `removePunctuation`
-- 👍
-- ➜
-- registered trademark
 - emoji
 - _use a better RegEx_
 
