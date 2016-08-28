@@ -6,7 +6,7 @@
 const _ = require('lodash');
 const expect = require('chai').expect;
 
-describe.only('words', function () {
+describe('words', function () {
     var input;
     var actual;
     var expected;
