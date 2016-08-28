@@ -2,8 +2,6 @@ trim trailing punctuation
 
 isolate four letter words
 
-lowercase
-
 add to `removePunctuation`
 - emoji
 - _use a better RegEx_
