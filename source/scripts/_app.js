@@ -12,6 +12,12 @@ app.filterCommonProse = function () {
     domManip.setTextarea(words);
 };
 
+app.toLowerCase = function () {
+    var words = domManip.getTextarea();
+    words = words.toLowerCase();
+    domManip.setTextarea(words);
+};
+
 app.filterTmProse = function () {
     var words = domManip.getTextarea();
     words = textUtil.filterTmProse(words);
