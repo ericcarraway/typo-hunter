@@ -92,6 +92,12 @@ describe('removePunctuation', function () {
         expect(removePunctuation(input)).to.eql(expected);
     });
 
+    it('set 12', function () {
+        var input    = 'e👍 f› ⬆g';
+        var expected = 'e  f   g';
+        expect(removePunctuation(input)).to.eql(expected);
+    });
+
     it("should remove a 'single quote' character", function () {
         var input    = 'foo\'bar';
         var expected = 'foo bar';
