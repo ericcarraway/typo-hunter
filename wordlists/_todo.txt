@@ -23,3 +23,7 @@ spinning
 spontaneous
 stimulating
 strategic
+
+
+235,886 words in
+/usr/share/dict/words
