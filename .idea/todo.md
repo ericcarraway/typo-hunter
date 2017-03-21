@@ -1,15 +1,5 @@
 trim trailing punctuation
 
-ー
-–
-–
-│
-☁
-
-sort by length
-- short to long
-- long to short
-
 isolate four letter words
 
 add to `removePunctuation`
