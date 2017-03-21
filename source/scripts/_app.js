@@ -98,6 +98,14 @@ app.newlineToSpace = function () {
     domManip.setTextarea(words);
 };
 
+app.sortByLength = function () {
+    var words = domManip.getTextarea();
+    var arrayOfWords = stringToArrayOfWords(words);
+    arrayOfWords = sortByLength(arrayOfWords);
+    arrayOfWords = arrayOfWords.join('\n');
+    domManip.setTextarea(arrayOfWords);
+};
+
 app.trim = function () {
     var words = domManip.getTextarea();
     words = textUtil.trim(words);
