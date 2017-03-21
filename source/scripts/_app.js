@@ -106,6 +106,13 @@ app.sortByLength = function () {
     domManip.setTextarea(arrayOfWords);
 };
 
+app.sortByLengthReverse = function () {
+    var words = domManip.getTextarea();
+    var arrayOfWords = stringToArrayOfWords(words);
+    arrayOfWords = sortByLength(arrayOfWords).reverse().join('\n');
+    domManip.setTextarea(arrayOfWords);
+};
+
 app.trim = function () {
     var words = domManip.getTextarea();
     words = textUtil.trim(words);
