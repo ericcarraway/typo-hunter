@@ -6,8 +6,9 @@
         return arr.sort(comparatorFn);
 
         function comparatorFn(a, b) {
-          return a.length - b.length || // sort by length, if equal then
-                 a.localeCompare(b);    // sort by dictionary order
+            // sort by length
+            // if equal then sort by dictionary order
+            return (a.length - b.length) || a.localeCompare(b);
         }
     };
 
