@@ -94,7 +94,10 @@
             '👍',
             '😊',
             '★',
-            '☆'
+            '☆',
+            '│',
+            '☁',
+            'ー'
         ];
         regexes = regexes.join('|');
         regExp = new RegExp(regexes, 'g');

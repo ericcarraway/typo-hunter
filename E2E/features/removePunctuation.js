@@ -72,8 +72,8 @@ describe('buttons', function () {
         });
 
         it('6', function () {
-            inputText = 'foo { | } bar ~ → ✓ baz ✔ ✖ © · qux';
-            expectedText = 'foo       bar       baz         qux';
+            inputText = 'foo { | } bar ~ → ✓ baz ✔ ✖ © ·             │☁ーqux';
+            expectedText = 'foo       bar       baz                        qux';
 
             browser.setValue('textarea', inputText);
             browser.click(btnSelector);
