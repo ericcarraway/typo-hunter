@@ -93,8 +93,8 @@ describe('removePunctuation', function () {
     });
 
     it('set 12', function () {
-        var input    = 'e👍 f› ⬆g │hi☁ jーk';
-        var expected = 'e  f   g  hi  j k';
+        var input    = 'e👍 f› ⬆g │hi☁ jーk ♥♥♥ l';
+        var expected = 'e  f   g  hi  j k     l';
         expect(removePunctuation(input)).to.eql(expected);
     });
 
