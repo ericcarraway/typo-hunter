@@ -11,11 +11,11 @@ describe('initial tests', function () {
         expect(title).to.equal('typo-hunter.com');
     });
 
-    it('should have 20 buttons', function () {
+    it('should have 22 buttons', function () {
         var selector = 'button';
         var elements = browser.elements(selector);
 
-        expect(elements.value.length).to.equal(20);
+        expect(elements.value.length).to.equal(22);
     });
 
     it('should have the correct button text', function () {
@@ -27,6 +27,8 @@ describe('initial tests', function () {
             'remove punctuation',
             'trim',
             'toLowerCase()',
+            'sort by length',
+            'sort by length (reverse)',
             'TM',
             'alice.txt',
             '2016-04-07',
