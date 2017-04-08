@@ -97,7 +97,8 @@
             '☆',
             '│',
             '☁',
-            'ー'
+            'ー',
+            '♥' // heart
         ];
         regexes = regexes.join('|');
         regExp = new RegExp(regexes, 'g');
