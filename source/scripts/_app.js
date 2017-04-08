@@ -138,3 +138,10 @@ app.removeContractions = function () {
     arrayOfWords = arrayOfWords.join('\n');
     domManip.setTextarea(arrayOfWords);
 };
+
+app.prettyPrintArrOfWords = function () {
+    var text = domManip.getTextarea();
+    var arrayOfWords = text.split('\n');
+    arrayOfWords = prettyPrintArrOfWords(arrayOfWords);
+    domManip.setTextarea(arrayOfWords);
+};
