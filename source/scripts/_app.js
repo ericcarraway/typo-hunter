@@ -145,3 +145,10 @@ app.prettyPrintArrOfWords = function () {
     arrayOfWords = prettyPrintArrOfWords(arrayOfWords);
     domManip.setTextarea(arrayOfWords);
 };
+
+app.isolateLinesContainingAtSymbol = function () {
+    var arrayOfWords = domManip.getTextarea().split('\n');
+    arrayOfWords = isolateLinesContaining(arrayOfWords, '@');
+    arrayOfWords = arrayOfWords.join('\n');
+    domManip.setTextarea(arrayOfWords);
+};
