@@ -94,7 +94,25 @@ describe('removePunctuation', function () {
 
     it('set 12', function () {
         var input    = 'e👍 f› ⬆g │hi☁ jーk ♥♥♥ l';
-        var expected = 'e  f   g  hi  j k     l';
+        var expected = 'e   f   g  hi  j k     l';
+        expect(removePunctuation(input)).to.eql(expected);
+    });
+
+    it('set May 10, 2017', function () {
+        var input    = 'a⎦⎥t⎤e⎣s⎢t⎡⋅←zz';
+        var expected = 'a  t e s t   zz';
+        expect(removePunctuation(input)).to.eql(expected);
+    });
+
+    it('should keep numbers', function () {
+        var input    = '0123456789';
+        var expected = '0123456789';
+        expect(removePunctuation(input)).to.eql(expected);
+    });
+
+    it('rename this test', function () {
+        var input    = '¡¢£¤t¥e¦s§t¨ª«¬®°±²³´µ¶¸¹º»¼½¾¿‘‚„†‡•…‰€™➜⬆›👍😊★☆│☁ー♥zzz';
+        var expected = '    t e s t                                           zzz';
         expect(removePunctuation(input)).to.eql(expected);
     });
 
@@ -106,7 +124,7 @@ describe('removePunctuation', function () {
 
     it("should remove a 'thumbs-up' emoji", function () {
         var input    = 'foo👍bar';
-        var expected = 'foo bar';
+        var expected = 'foo  bar';
         expect(removePunctuation(input)).to.eql(expected);
     });
 
@@ -140,32 +158,24 @@ describe('removePunctuation', function () {
         expect(removePunctuation(input)).to.eql(expected);
     });
 
-    it.skip("should remove a 'new line' character", function () {
+    it("should remove a 'new line' character", function () {
         var input    = 'foo\nbar';
         var expected = 'foo bar';
 
-        // result:
-        // foo
-        // bar
         expect(removePunctuation(input)).to.eql(expected);
     });
 
-    it.skip("should remove a 'backspace' character", function () {
+    it("should remove a 'backspace' character", function () {
         var input    = 'foo\bbar';
         var expected = 'foo bar';
 
-        // result:
-        // fobar
         expect(removePunctuation(input)).to.eql(expected);
     });
 
-    it.skip("should remove a 'form feed' character", function () {
+    it("should remove a 'form feed' character", function () {
         var input    = 'foo\fbar';
         var expected = 'foo bar';
 
-        // result:
-        // foo
-        //    bar
         expect(removePunctuation(input)).to.eql(expected);
     });
 });
