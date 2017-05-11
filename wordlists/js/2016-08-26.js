@@ -1136,7 +1136,6 @@ wordlists._2016_08_26 = [
     'silliness',
     'simulation',
     'singles',
-    'sisyphus',
     'skaters',
     'skating',
     'skewed',

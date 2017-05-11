@@ -93,7 +93,7 @@ describe('buttons', function () {
             expect(actualText).to.equal(expectedText);
         });
 
-        it('should filter thumbs-up emoji', function () {
+        it.skip('should filter thumbs-up emoji', function () {
             inputText = 'foo 👍 bar';
             expectedText = 'foo   bar';
 
